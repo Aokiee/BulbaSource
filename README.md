@@ -1,2 +1,2 @@
 # bulbasource
-A Wikipedia ABOUT Pokémon/s
+A source about Pokémon's latest news, updates, and more
