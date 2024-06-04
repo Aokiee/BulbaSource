@@ -1,2 +1,2 @@
 # bulbasource
-A source about Pokémon's latest news, updates, and more
+A source For all The LATEST NEWS. UPDATES and more ABOUT Pokémon
