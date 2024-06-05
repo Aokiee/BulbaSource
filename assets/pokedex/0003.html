@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bulbasaur</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+   .pokemon-image {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+   .pokemon-info {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+   .pokemon-name {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+   .pokemon-id {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Add responsiveness */
+
+    /* For screens larger than 1200px */
+    @media only screen and (min-width: 1200px) {
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+      }
+      .pokemon-image {
+        width: 250px;
+        height: 250px;
+      }
+      .pokemon-info {
+        padding: 30px;
+      }
+      .pokemon-name {
+        font-size: 40px;
+      }
+      .pokemon-id {
+        font-size: 30px;
+      }
+    }
+
+    /* For screens between 992px and 1200px */
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .container {
+        max-width: 700px;
+        margin: 40px auto;
+      }
+      .pokemon-image {
+        width: 220px;
+        height: 220px;
+      }
+      .pokemon-info {
+        padding: 25px;
+      }
+      .pokemon-name {
+        font-size: 36px;
+      }
+      .pokemon-id {
+        font-size: 26px;
+      }
+    }
+
+    /* For screens between 768px and 991px */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+      }
+      .pokemon-image {
+        width: 200px;
+        height: 200px;
+      }
+      .pokemon-info {
+        padding: 20px;
+      }
+      .pokemon-name {
+        font-size: 32px;
+      }
+      .pokemon-id {
+        font-size: 24px;
+      }
+    }
+
+    /* For screens smaller than 768px */
+    @media only screen and (max-width: 767px) {
+      .container {
+        max-width: 400px;
+        margin: 20px auto;
+      }
+      .pokemon-image {
+        width: 180px;
+        height: 180px;
+      }
+      .pokemon-info {
+        padding: 15px;
+      }
+      .pokemon-name {
+        font-size: 28px;
+      }
+      .pokemon-id {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://www.serebii.net/pokemongo/pokemon/003.png" alt="Bulbasaur" class="pokemon-image">
+
+    <div class="pokemon-info">
+      <h2 class="pokemon-name">Venusaur</h2>
+      <h3 class="pokemon-id">#0003</h3>
+      <p>Venusaur, the final evolution of the Bulbasaur line, is a formidable Grass/Poison-type Pokémon. Its thick vines are powerful weapons, capable of ensnaring opponents and draining their energy.</p>
+    </div>
+  </div>
+</body>
+</html>
