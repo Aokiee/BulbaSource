@@ -1,110 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BulbaSource - Pokedex</title>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<style>
-		body {
-			background-color: #f9f9f9;
-			font-family: 'Open Sans', sans-serif;
-			margin: 0;
-			height: 100vh; /* add this to make the body full screen height */
-		}
-		.container {
-			width: 90%; /* increased width */
-			margin: 0 auto; /* remove the margin */
-			padding: 40px; /* increased padding */
-			background-color: #fff;
-			border: 1px solid #ddd;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			overflow-y: auto;
-			height: 100vh; /* make the container full screen height */
-		}
-		.pokedex-header {
-			width: 100%;
-			background-color: #333;
-			color: #fff;
-			padding: 20px 40px; /* increased padding */
-			margin-bottom: 40px; /* increased margin */
-			display: flex;
-			justify-content: center;
-		}
-		.pokemon-box {
-			width: 60%; /* increased width */
-			margin: 40px auto; /* increased margin */
-			padding: 60px; /* increased padding */
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-		}
-		.pokemon-box img {
-			width: 100%;
-			height: auto;
-			border-radius: 10px 10px 0 0;
-		}
-		.pokemon-box h2 {
-			margin-top: 0;
-			margin-bottom: 20px; /* increased margin */
-		}
-		.see-more {
-			color: #FF0000;
-			text-decoration: underline;
-			cursor: pointer;
-		}
-		
-		/* Add media queries to make the site responsive */
-		@media only screen and (max-width: 768px) {
-			.container {
-				width: 95%;
-			}
-			.pokemon-box {
-				width: 80%;
-			}
-		}
-		
-		@media only screen and (max-width: 480px) {
-			.container {
-				width: 98%;
-			}
-			.pokemon-box {
-				width: 90%;
-			}
-		}
-	</style>
+  <title>BulbaSource - Pokédex</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, .generation button, .pokemon h3 {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .generation {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .generation button {
+      background-color: #eee;
+      border: none;
+      padding: 5px 10px; /* Adjusted button padding */
+      border-radius: 5px;
+      margin: 0 5px; /* Adjusted button margin */
+      cursor: pointer;
+    }
+
+    .generation button.active {
+      background-color: #ddd;
+    }
+
+    .pokedex {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .pokemon {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .pokemon img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .pokemon h3 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
-	<div class="pokedex-header">
-		<h1>BulbaSource - Pokédex</h1>
-	</div>
-	<div class="container">
-		<div class="pokemon-box">
-			<img src="0124/bulbasaur.jpg" alt="Bulbasaur">
-			<h1>Bulbasaur</h1>
-			<p>Height: 2'04"</p>
-			<p>Weight: 15.2 lbs.</p>
-			<a href="0241/bulbasaur.html"><span class="see-more">See More</span></a>
-		</div>
-		<div class="pokemon-box">
-			<img src="0124/ivysaur.jpg" alt="Ivysaur">
-			<h1>Ivysaur</h1>
-			<p>Height: 1'08"</p>
-			<p>Weight: 19.8 lbs.</p>
-			<a href="0241/ivysaur.html"><span class="see-more">See More</span></a>
-		</div>
-		<div class="pokemon-box">
-			<img src="0124/venusaur.jpg" alt="Venusaur">
-			<h1>Venusaur</h1>
-			<p>Height: 6'087"</p>
-			<p>Weight: 220.5 lbs.</p>
-			<a href="0241/venusaur.html"><span class="see-more">See More</span></a>
-		</div>
-	</div>
+  <div class="container">
+    <h1>Pokédex</h1>
+
+    <div class="generation">
+      <button class="active">Gen 1</button>
+      <button>Gen 2</button>
+      <button>Gen 3</button>
+    </div>
+
+    <div class="pokedex">
+      <div class="pokemon">
+        <img src="0001.png" alt="Bulbasaur">
+        <h3>Bulbasaur</h3>
+      </div>
+      <div class="pokemon">
+        <img src="0002.png" alt="Ivysaur">
+        <h3>Ivysaur</h3>
+      </div>
+      <div class="pokemon">
+        <img src="0003.png" alt="Venusaur">
+        <h3>Venusaur</h3>
+      </div>
+      <!-- Remaining Pokemon entries -->
+    </div>
+  </div>
+
+  <script>
+    const generationButtons = document.querySelectorAll('.generation button');
+    const pokedex = document.querySelector('.pokedex');
+
+    generationButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        generationButtons.forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+
+        // Update pokedex content based on selected generation
+        // Example:
+        if (button.textContent === 'Gen 1') {
+          // Load generation 1 pokemon data
+        } else if (button.textContent === 'Gen 2') {
+          // Load generation 2 pokemon data
+        }
+        // ... and so on
+      });
+    });
+  </script>
 </body>
 </html>
