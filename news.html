@@ -6,13 +6,15 @@
 	<style>
 		body {
 			font-family: 'Open Sans', sans-serif;
+			margin: 0;
+			padding: 0;
 		}
 		
 		.news-box {
-			width: 300px;
+			width: 50%; /* increased width to 50% of parent container */
 			background-color: #f7f7f7;
-			padding: 20px;
-			margin: 20px;
+			padding: 30px; /* increased padding to 30px */
+			margin: 40px auto; /* added auto margin to center the box */
 			border: 1px solid #ddd;
 			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -20,7 +22,7 @@
 		
 		.news-box img {
 			width: 100%;
-			height: 150px;
+			height: 250px; /* increased height to 250px */
 			object-fit: cover;
 			border-radius: 10px 10px 0 0;
 		}
@@ -37,27 +39,38 @@
 		.news-box a:hover {
 			color: #23527c;
 		}
+		
+		/* added media queries for responsive design */
+		@media only screen and (max-width: 768px) {
+			.news-box {
+				width: 70%; /* adjust width for smaller screens */
+			}
+		}
+		
+		@media only screen and (max-width: 480px) {
+			.news-box {
+				width: 90%; /* adjust width for even smaller screens */
+			}
+		}
 	</style>
 </head>
 <body>
-	<h1>Pokémon News</h1>
+	<h1 style="text-align: center;">Pokémon News</h1>
 	
 	<div class="news-box">
 		<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/misc/_tiles/2024/water-type-pokemon/water-type-pokemon-169.png" alt="Pokémon News">
-		<h2>Dive into a Celebration of Water-Type Pokémon</h2>
-		<p>June 04, 2024</p>
-    <p>Water-type Pokémon are taking the Pokémon world by storm throughout the month of June.</p>
-		<a href="news01.html">See More</a>
-	</div>
-	
-	<div class="news-box">
-		<img src="https://bulbagarden.net/attachments/sleep_summerfestival_2024-png.189700/" alt="Pokémon News Image">
 		<h2>Cramorant arrives in Pokémon Sleep</h2>
-		<p>The next Pokémon Sleep event has been revealed. This is the Summer Festival event which runs in all areas from June 17th to June 24th and adds Cramorant into the game which is a Slumbering Pokémon.</p>
+		<p>June 06, 2024</p>
+                <p>The next Pokémon Sleep event has been revealed. This is the Summer Festival event which runs in all areas from June 17th to June 24th and adds Cramorant into the game which is a Slumbering Pokémon.</p>
 		<a href="news02.html">See More</a>
 	</div>
 	
-	<!-- Add more news boxes here -->
+	<div class="news-box">
+		<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/misc/_tiles/2024/water-type-pokemon/water-type-pokemon-169.png" alt="Pokémon News Image">
+		<h2>Dive into a Celebration of Water-Type Pokémon</h2>
+		<p>Water-type Pokémon are taking the Pokémon world by storm throughout the month of June.</p>
+		<a href="news01.html">See More</a>
+	</div>
 	
 </body>
 </html>
